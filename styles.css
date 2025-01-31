@@ -2,7 +2,7 @@
 :root {
   --primary-color: #ffa500;
   --secondary-color: #ff8c00;
-  --dark-bg: #121212;  /* Updated to match the about page background */
+  --dark-bg: #0d0d0d;
   --header-bg: #1a1a1a;
   --text-color: #ffffff;
   --transition-speed: 0.3s;
@@ -17,7 +17,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--dark-bg); /* Using the dark grey from about page */
+  background-color: #151515; /* Same grey shade as about page background */
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -147,6 +147,24 @@ nav ul li a.active {
   transform: translateY(-10px);
 }
 
+/* Next Gen Innovation Box */
+.next-gen-box {
+  background-color: var(--header-bg); /* Same color as navigation */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+.next-gen-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.next-gen-box p {
+  font-size: 1.2rem;
+}
+
 /* Footer */
 footer {
   background: var(--header-bg);
@@ -158,14 +176,14 @@ footer {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+      font-size: 2.5rem;
   }
   nav ul {
-    flex-direction: column;
-    gap: 10px;
+      flex-direction: column;
+      gap: 10px;
   }
   .header-container {
-    flex-direction: column;
-    gap: 10px;
+      flex-direction: column;
+      gap: 10px;
   }
 }
