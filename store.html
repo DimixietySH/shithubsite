@@ -7,12 +7,27 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* Hide the "Store" link in the navigation on store.html */
+    body.store-page nav ul li a[href="store.html"] {
+      display: none;
+    }
+
+    /* Footer styles to remove black border */
+    footer {
+      border: none;
+      background: var(--header-bg);
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
     .store-section {
       padding: 100px 20px;
       background: #151515;
       min-height: 80vh;
       text-align: center;
     }
+
     .store-container {
       max-width: 800px;
       margin: auto;
@@ -22,14 +37,17 @@
       color: var(--text-color, #ffffff);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
+
     .store-container h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
     }
+
     .store-container p {
       font-size: 1.2rem;
       margin-bottom: 20px;
     }
+
     .buy-button {
       display: inline-block;
       background: linear-gradient(90deg, #ff8c00, #ffa500);
@@ -42,13 +60,14 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
     }
+
     .buy-button:hover {
       transform: scale(1.1);
       box-shadow: 0 0 30px rgba(255, 165, 0, 1);
     }
   </style>
 </head>
-<body>
+<body class="store-page">
   <header>
     <div class="container header-container">
       <div class="logo">Shithub Softworks</div>
@@ -56,7 +75,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="store.html" class="active">Store</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
