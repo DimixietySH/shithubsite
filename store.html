@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store | Shithub VR</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .store-section {
+      padding: 100px 20px;
+      background: #151515;
+      min-height: 80vh;
+      text-align: center;
+    }
+    .store-container {
+      max-width: 800px;
+      margin: auto;
+      background: var(--header-bg, #1a1a1a);
+      padding: 40px;
+      border-radius: 10px;
+      color: var(--text-color, #ffffff);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .store-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .store-container p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .buy-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff8c00, #ffa500);
+      color: #000;
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
+    }
+    .buy-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(255, 165, 0, 1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">Shithub Softworks</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="store.html" class="active">Store</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="store-section">
+      <div class="store-container">
+        <h1>Shithub VR</h1>
+        <p>Experience the next level of immersive VR technology with Shithub VR. Cutting-edge design, smooth performance, and an unparalleled virtual experience.</p>
+        <p><strong>Price:</strong> $299.99</p>
+        <a href="store.html" class="buy-button">Buy Now</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shithub Softworks. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
