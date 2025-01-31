@@ -2,7 +2,8 @@
 :root {
   --primary-color: #ffa500;
   --secondary-color: #ff8c00;
-  --dark-bg: #1a1a1a; /* Matching the grey shade from the navigation */
+  --dark-bg: #121212;  /* Updated to match the about page background */
+  --header-bg: #1a1a1a;
   --text-color: #ffffff;
   --transition-speed: 0.3s;
 }
@@ -14,17 +15,10 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  background-color: var(--dark-bg); /* Set the global background color */
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-bg); /* Using the dark grey from about page */
+  color: var(--text-color);
   line-height: 1.6;
 }
 
@@ -38,7 +32,7 @@ body {
 
 /* Header Styles */
 header {
-  background-color: var(--dark-bg); /* Matching the grey shade from the navigation */
+  background-color: var(--header-bg);
   position: fixed;
   width: 100%;
   top: 0;
@@ -121,7 +115,7 @@ nav ul li a.active {
 /* Features Section */
 .features {
   padding: 60px 0;
-  background: var(--dark-bg); /* Matching the grey shade */
+  background: #151515;
 }
 
 .features .container {
@@ -132,7 +126,7 @@ nav ul li a.active {
 }
 
 .feature-card {
-  background: var(--dark-bg); /* Consistent grey background for cards */
+  background: var(--header-bg);
   padding: 20px;
   border-radius: 8px;
   width: 300px;
@@ -155,29 +149,23 @@ nav ul li a.active {
 
 /* Footer */
 footer {
-  background: var(--dark-bg); /* Matching the grey shade */
+  background: var(--header-bg);
   padding: 20px 0;
   text-align: center;
   font-size: 0.9rem;
-  margin-top: auto; /* Ensure footer sticks at the bottom */
-}
-
-/* Preventing Gap Between Content and Footer */
-main {
-  flex-grow: 1; /* Ensures the content grows and pushes footer down */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
   nav ul {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
   .header-container {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 }
