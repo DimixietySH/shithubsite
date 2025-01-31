@@ -15,19 +15,11 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  margin-bottom: 0; /* Ensure no margin on the body */
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--dark-bg);
   color: var(--text-color);
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure the body takes full height */
 }
 
 /* Container for layout */
@@ -161,25 +153,19 @@ footer {
   padding: 20px 0;
   text-align: center;
   font-size: 0.9rem;
-  margin-top: auto; /* Make sure footer sticks at the bottom */
-}
-
-/* Preventing Gap Between Content and Footer */
-main {
-  flex-grow: 1; /* Ensures the content grows and pushes footer down */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
   nav ul {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
   .header-container {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 }
