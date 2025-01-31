@@ -2,8 +2,7 @@
 :root {
   --primary-color: #ffa500;
   --secondary-color: #ff8c00;
-  --dark-bg: #0d0d0d; /* Dark grey-blackish background */
-  --header-bg: #1a1a1a;
+  --dark-bg: #1a1a1a; /* Matching the grey shade from the navigation */
   --text-color: #ffffff;
   --transition-speed: 0.3s;
 }
@@ -18,7 +17,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: var(--dark-bg); /* Unified dark background */
+  background-color: var(--dark-bg); /* Set the global background color */
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -39,7 +38,7 @@ body {
 
 /* Header Styles */
 header {
-  background-color: var(--header-bg);
+  background-color: var(--dark-bg); /* Matching the grey shade from the navigation */
   position: fixed;
   width: 100%;
   top: 0;
@@ -122,7 +121,7 @@ nav ul li a.active {
 /* Features Section */
 .features {
   padding: 60px 0;
-  background: var(--dark-bg); /* Unified dark background */
+  background: var(--dark-bg); /* Matching the grey shade */
 }
 
 .features .container {
@@ -133,7 +132,7 @@ nav ul li a.active {
 }
 
 .feature-card {
-  background: var(--header-bg);
+  background: var(--dark-bg); /* Consistent grey background for cards */
   padding: 20px;
   border-radius: 8px;
   width: 300px;
@@ -156,7 +155,7 @@ nav ul li a.active {
 
 /* Footer */
 footer {
-  background: var(--header-bg);
+  background: var(--dark-bg); /* Matching the grey shade */
   padding: 20px 0;
   text-align: center;
   font-size: 0.9rem;
