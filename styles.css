@@ -164,6 +164,11 @@ footer {
   margin-top: auto; /* Make sure footer sticks at the bottom */
 }
 
+/* Preventing Gap Between Content and Footer */
+main {
+  flex-grow: 1; /* Ensures the content grows and pushes footer down */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content h1 {
