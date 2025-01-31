@@ -20,6 +20,9 @@ body {
   background-color: var(--dark-bg);
   color: var(--text-color);
   line-height: 1.6;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Container for layout */
@@ -47,7 +50,7 @@ header {
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Larger logo for bigger screens */
   font-weight: 700;
   color: var(--primary-color);
 }
@@ -55,13 +58,13 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px; /* Increased gap for larger screens */
 }
 
 nav ul li a {
   color: var(--text-color);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem; /* Larger text for nav links */
   transition: color var(--transition-speed);
 }
 
@@ -83,17 +86,17 @@ nav ul li a.active {
 
 .hero-content {
   background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
+  padding: 60px; /* Increased padding */
   border-radius: 8px;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 4rem; /* Larger text for hero title */
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Larger text for description */
   margin-bottom: 30px;
 }
 
@@ -101,10 +104,10 @@ nav ul li a.active {
   display: inline-block;
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   color: var(--dark-bg);
-  padding: 15px 30px;
+  padding: 15px 40px; /* Larger padding */
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* Larger button text */
   transition: transform var(--transition-speed);
 }
 
@@ -114,33 +117,33 @@ nav ul li a.active {
 
 /* Features Section */
 .features {
-  padding: 60px 0;
+  padding: 80px 0; /* Larger padding for features section */
   background: #151515;
 }
 
 .features .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px; /* Increased gap */
   justify-content: center;
 }
 
 .feature-card {
   background: var(--header-bg);
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
-  width: 300px;
+  width: 350px; /* Increased width */
   text-align: center;
   transition: transform var(--transition-speed);
 }
 
 .feature-card h2 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-size: 1.8rem; /* Larger text for feature title */
 }
 
 .feature-card p {
-  font-size: 1rem;
+  font-size: 1.1rem; /* Larger text for feature description */
 }
 
 .feature-card:hover {
@@ -150,15 +153,77 @@ nav ul li a.active {
 /* Footer */
 footer {
   background: var(--header-bg);
-  padding: 20px 0;
+  padding: 30px 0; /* Larger padding */
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Store Page */
+.store-section {
+  padding: 120px 20px; /* Larger padding for store section */
+  background: #151515;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.store-container {
+  max-width: 1000px; /* Larger container */
+  margin: auto;
+  background: var(--header-bg, #1a1a1a);
+  padding: 50px;
+  border-radius: 10px;
+  color: var(--text-color, #ffffff);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Larger shadow */
+}
+
+.store-container h1 {
+  font-size: 3rem; /* Larger text for store title */
+  margin-bottom: 30px;
+}
+
+.store-container p {
+  font-size: 1.5rem; /* Larger price text */
+  margin-bottom: 30px;
+}
+
+.buy-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff8c00, #ffa500);
+  color: #000;
+  padding: 20px 50px; /* Larger button padding */
+  font-size: 1.8rem; /* Larger font size */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.6); /* Larger shadow */
+}
+
+.buy-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(255, 165, 0, 1); /* Larger hover shadow */
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1920px) {
+  /* Adjustments for very large screens */
+  .container {
+    width: 85%; /* Adjust container width */
+  }
+
+  .hero-content {
+    padding: 80px; /* Extra padding on large screens */
+  }
+
+  .feature-card {
+    width: 400px; /* Larger feature card width */
+  }
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   nav ul {
     flex-direction: column;
