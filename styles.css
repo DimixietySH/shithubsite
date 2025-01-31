@@ -17,7 +17,7 @@
 
 html, body {
   height: 100%;
-  margin-bottom: 0; /* Remove bottom margin */
+  margin-bottom: 0; /* Ensure no margin on the body */
 }
 
 body {
@@ -25,6 +25,9 @@ body {
   background-color: var(--dark-bg);
   color: var(--text-color);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes full height */
 }
 
 /* Container for layout */
@@ -33,7 +36,6 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
-  margin-bottom: 0; /* Remove bottom margin */
 }
 
 /* Header Styles */
@@ -159,7 +161,7 @@ footer {
   padding: 20px 0;
   text-align: center;
   font-size: 0.9rem;
-  margin-top: auto;
+  margin-top: auto; /* Make sure footer sticks at the bottom */
 }
 
 /* Responsive Adjustments */
