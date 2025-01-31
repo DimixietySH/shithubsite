@@ -20,7 +20,6 @@ body {
   background-color: var(--dark-bg);
   color: var(--text-color);
   line-height: 1.6;
-  overflow-x: hidden; /* Ensure no horizontal scroll */
 }
 
 /* Container for layout */
@@ -154,76 +153,19 @@ footer {
   padding: 20px 0;
   text-align: center;
   font-size: 0.9rem;
-  border: none;  /* Ensures no border */
-  box-shadow: none;  /* Removes any box-shadow */
-  margin: 0;  /* Ensures no margin that could cause the black line */
-}
-
-/* Store Page Specific Styles */
-.store-section {
-  padding: 100px 20px;
-  background: #151515;
-  min-height: 80vh;
-  text-align: center;
-}
-
-.store-container {
-  max-width: 800px;
-  margin: auto;
-  background: var(--header-bg, #1a1a1a);
-  padding: 40px;
-  border-radius: 10px;
-  color: var(--text-color, #ffffff);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.store-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.store-container p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.buy-button {
-  display: inline-block;
-  background: linear-gradient(90deg, #ff8c00, #ffa500);
-  color: #000;
-  padding: 15px 30px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
-}
-
-.buy-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(255, 165, 0, 1);
-}
-
-/* Reset any bottom margin/padding for the body and footer */
-body, footer {
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
-
   nav ul {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
-
   .header-container {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 }
