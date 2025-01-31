@@ -5,8 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Shithub Softworks</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Use the same font as the homepage -->
+  <!-- Include the modern Poppins font for consistency -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* About page specific styles */
+    .about-section {
+      padding: 100px 20px;
+      background: #151515;
+      min-height: 80vh;
+    }
+    .about-container {
+      max-width: 800px;
+      margin: auto;
+      background: var(--header-bg, #1a1a1a);
+      padding: 40px;
+      border-radius: 10px;
+      color: var(--text-color, #ffffff);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .about-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .about-container p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .about-container ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    .about-container li {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -26,7 +61,7 @@
   <!-- Main Content -->
   <main>
     <section class="about-section">
-      <div class="container about-container">
+      <div class="about-container">
         <h1>About Shithub Softworks</h1>
         <p>
           Shithub Softworks is a cutting-edge technology company focused on delivering next-gen innovations that redefine the digital experience. We combine immersive design, unmatched performance, and revolutionary technology to bring you solutions that are as efficient as they are engaging.
