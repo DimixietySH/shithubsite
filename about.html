@@ -5,72 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Shithub Softworks</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Optional additional styles for the About page */
-    .about-container {
-      max-width: 900px;
-      margin: 100px auto 50px;
-      padding: 20px;
-      background: #222;
-      border-radius: 10px;
-      color: #ffa500;
-    }
-    .about-container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    .about-container p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-    .about-container ul {
-      list-style: disc;
-      padding-left: 20px;
-      margin-top: 20px;
-    }
-    .about-container li {
-      margin-bottom: 10px;
-    }
-  </style>
+  <!-- Use the same font as the homepage -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="logo">Shithub Softworks</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container header-container">
+      <div class="logo">Shithub Softworks</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
-  <!-- About Section -->
+  
+  <!-- Main Content -->
   <main>
-    <section class="about-container">
-      <h1>About Shithub Softworks</h1>
-      <p>
-        Shithub Softworks is a cutting-edge technology company focused on delivering next-gen innovations that redefine the digital experience. We combine immersive design, unmatched performance, and revolutionary technology to bring you solutions that are as efficient as they are engaging.
-      </p>
-      <p>
-        Our mission is to push the boundaries of what technology can achieve by:
-      </p>
-      <ul>
-        <li><strong>Innovation:</strong> Continuously pioneering new ideas and technologies.</li>
-        <li><strong>Design:</strong> Creating aesthetically pleasing and user-friendly interfaces.</li>
-        <li><strong>Performance:</strong> Optimizing for speed, efficiency, and reliability.</li>
-        <li><strong>User Experience:</strong> Ensuring intuitive interactions for every user.</li>
-      </ul>
-      <p>
-        At Shithub Softworks, we believe in transforming industries by merging technology with creativity. We’re dedicated to delivering products that not only perform at the highest level but also inspire and empower our users.
-      </p>
+    <section class="about-section">
+      <div class="container about-container">
+        <h1>About Shithub Softworks</h1>
+        <p>
+          Shithub Softworks is a cutting-edge technology company focused on delivering next-gen innovations that redefine the digital experience. We combine immersive design, unmatched performance, and revolutionary technology to bring you solutions that are as efficient as they are engaging.
+        </p>
+        <p>
+          Our mission is to push the boundaries of what technology can achieve by:
+        </p>
+        <ul>
+          <li><strong>Innovation:</strong> Continuously pioneering new ideas and technologies.</li>
+          <li><strong>Design:</strong> Creating aesthetically pleasing and user-friendly interfaces.</li>
+          <li><strong>Performance:</strong> Optimizing for speed, efficiency, and reliability.</li>
+          <li><strong>User Experience:</strong> Ensuring intuitive interactions for every user.</li>
+        </ul>
+        <p>
+          At Shithub Softworks, we believe in transforming industries by merging technology with creativity. We’re dedicated to delivering products that not only perform at the highest level but also inspire and empower our users.
+        </p>
+      </div>
     </section>
   </main>
-
+  
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Shithub Softworks. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Shithub Softworks. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
