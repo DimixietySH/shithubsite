@@ -1,3 +1,13 @@
+/* CSS Variables for easy theming */
+:root {
+  --primary-color: #ffa500;
+  --secondary-color: #ff8c00;
+  --dark-bg: #0d0d0d;
+  --header-bg: #1a1a1a;
+  --text-color: #ffffff;
+  --transition-speed: 0.3s;
+}
+
 /* Global Styles */
 * {
   margin: 0;
@@ -5,16 +15,72 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin-bottom: 0; /* Ensure no margin on the body */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #151515; /* Same grey shade as about page background */
-  color: #ffffff;
+  background-color: var(--dark-bg);
+  color: var(--text-color);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes full height */
+}
+
+/* Container for layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--header-bg);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color var(--transition-speed);
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary-color);
 }
 
 /* Hero Section */
 .hero {
-  background-color: #151515; /* Same grey shade as about page background */
+  background: url('hero-bg.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -41,15 +107,79 @@ body {
 
 .btn {
   display: inline-block;
-  background: linear-gradient(90deg, #ffa500, #ff8c00);
-  color: #0d0d0d;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: var(--dark-bg);
   padding: 15px 30px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 1.1rem;
-  transition: transform 0.3s;
+  transition: transform var(--transition-speed);
 }
 
 .btn:hover {
   transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+  padding: 60px 0;
+  background: #151515;
+}
+
+.features .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: var(--header-bg);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  transition: transform var(--transition-speed);
+}
+
+.feature-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+  background: var(--header-bg);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto; /* Make sure footer sticks at the bottom */
+}
+
+/* Preventing Gap Between Content and Footer */
+main {
+  flex-grow: 1; /* Ensures the content grows and pushes footer down */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+      font-size: 2.5rem;
+  }
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+  .header-container {
+      flex-direction: column;
+      gap: 10px;
+  }
 }
