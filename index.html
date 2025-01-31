@@ -5,52 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shithub Softworks</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Optionally include a modern font like Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="logo">Shithub Softworks</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container header-container">
+      <div class="logo">Shithub Softworks</div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Next-Gen Innovation</h1>
-      <p>Experience the future with cutting-edge technology from Shithub Softworks.</p>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Next-Gen Innovation</h1>
+        <p>Experience the future with cutting-edge technology from Shithub Softworks.</p>
+        <a href="shithub-vr.html" class="btn">Discover Shithub VR</a>
+      </div>
+    </section>
 
-  <!-- VR Button Section -->
-  <div class="shithub-vr">
-    <a href="shithub-vr.html" class="vr-button">Discover Shithub VR</a>
-  </div>
-  
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <div class="feature-card">
-      <h2>Immersive Design</h2>
-      <p>Crafted for excellence with sleek visuals and seamless interaction.</p>
-    </div>
-    <div class="feature-card">
-      <h2>Unmatched Performance</h2>
-      <p>Optimized for speed, efficiency, and high-end performance.</p>
-    </div>
-    <div class="feature-card">
-      <h2>Revolutionary Technology</h2>
-      <p>Pioneering innovations that redefine industry standards.</p>
-    </div>
-  </section>
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <div class="feature-card">
+          <h2>Immersive Design</h2>
+          <p>Crafted for excellence with sleek visuals and seamless interaction.</p>
+        </div>
+        <div class="feature-card">
+          <h2>Unmatched Performance</h2>
+          <p>Optimized for speed, efficiency, and high-end performance.</p>
+        </div>
+        <div class="feature-card">
+          <h2>Revolutionary Technology</h2>
+          <p>Pioneering innovations that redefine industry standards.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Shithub Softworks. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Shithub Softworks. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
