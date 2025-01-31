@@ -5,54 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shithub Softworks</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Optionally include a modern font like Poppins -->
+  <!-- Include the modern Poppins font for consistency -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    /* Header Styles */
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #04AA6D;
+      color: #ffffff;
+    }
+    /* Hero Section Styles */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 80vh;
+      background: url('hero-background.jpg') no-repeat center center/cover;
+      color: #ffffff;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .hero a {
+      background-color: #04AA6D;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .hero a:hover {
+      background-color: #039a63;
+    }
+    /* Footer Styles */
+    footer {
+      background-color: #1a1a1a;
+      padding: 20px 0;
+      text-align: center;
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="container header-container">
+    <div class="container">
       <div class="logo">Shithub Softworks</div>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Next-Gen Innovation</h1>
-        <p>Experience the future with cutting-edge technology from Shithub Softworks.</p>
-        <a href="shithub-vr.html" class="btn">Discover Shithub VR</a>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-      <div class="container">
-        <div class="feature-card">
-          <h2>Immersive Design</h2>
-          <p>Crafted for excellence with sleek visuals and seamless interaction.</p>
-        </div>
-        <div class="feature-card">
-          <h2>Unmatched Performance</h2>
-          <p>Optimized for speed, efficiency, and high-end performance.</p>
-        </div>
-        <div class="feature-card">
-          <h2>Revolutionary Technology</h2>
-          <p>Pioneering innovations that redefine industry standards.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Shithub Softworks</h1>
+    <p>Innovating the future, one project at a time.</p>
+    <a href="projects.html">Explore Our Projects</a>
+  </section>
+  
   <!-- Footer -->
   <footer>
     <div class="container">
