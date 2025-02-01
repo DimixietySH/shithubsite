@@ -9,8 +9,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: #eee; /* light text color */
+  background-color: #121212; /* dark background */
 }
 
 .container {
@@ -21,14 +21,15 @@ body {
 
 /* Navigation */
 .navbar {
-  background: #fff;
+  background: #121212;
   padding: 1rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
 }
 
 .navbar .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #f39c12; /* orange accent */
 }
 
 .nav-links {
@@ -39,22 +40,38 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #eee;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #007aff; /* Accent color */
+  color: #f39c12;
 }
 
 /* Hero Section */
 .hero {
-  background: url('your-hero-image.jpg') no-repeat center center/cover;
-  color: #fff;
+  background: url('your-hero-image-dark.jpg') no-repeat center center/cover;
+  color: #eee;
   height: 80vh;
   display: flex;
   align-items: center;
   text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.8); /* dark overlay */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h2 {
@@ -68,16 +85,17 @@ body {
 }
 
 .btn {
-  background: #007aff;
-  color: #fff;
+  background: #f39c12;
+  color: #121212;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-  background: #005bb5;
+  background: #d35400;
+  transform: scale(1.05);
 }
 
 /* Sections */
@@ -89,6 +107,7 @@ body {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
+  color: #f39c12; /* using accent color for headings */
 }
 
 /* Products Section */
@@ -100,12 +119,18 @@ body {
 }
 
 .product-item {
-  background: #f9f9f9;
+  background: #1e1e1e;
   padding: 2rem;
   border-radius: 8px;
   flex: 1 1 300px;
   max-width: 400px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Form */
@@ -119,13 +144,21 @@ body {
 
 #contact-form input, #contact-form textarea {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   border-radius: 5px;
+  background: #1e1e1e;
+  color: #eee;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: #bbb;
 }
 
 /* Footer */
 .footer {
-  background: #f1f1f1;
+  background: #1e1e1e;
   text-align: center;
   padding: 1rem 0;
+  color: #bbb;
 }
