@@ -1,66 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Shithub Softworks</title>
+  <title>Shithub Softworks</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* About page specific styles */
-    .about-section {
-      padding: 100px 20px;
-      background: #151515;
-      min-height: 80vh;
-    }
-    .about-container {
-      max-width: 800px;
-      margin: auto;
-      background: var(--header-bg, #1a1a1a);
-      padding: 40px;
-      border-radius: 10px;
-      color: var(--text-color, #ffffff);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    .about-container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .about-container p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      line-height: 1.8;
-    }
-    .about-container ul {
-      list-style: disc;
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-    .about-container li {
-      margin-bottom: 10px;
-    }
-    
-    /* Global container */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    /* Standardized Footer Styling */
-    footer {
-      background: #111;
-      padding: 30px 0;
-      text-align: center;
-      color: #ffffff;
-      border-top: 2px solid #000; /* Consistent black border */
-      min-height: 60px;
-      display: flex;              /* Use flexbox for vertical centering */
-      align-items: center;        /* Center content vertically */
-      justify-content: center;    /* Center content horizontally */
-    }
-  </style>
 </head>
 <body>
   <!-- Header -->
@@ -69,39 +15,45 @@
       <div class="logo">Shithub Softworks</div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  
+
   <!-- Main Content -->
   <main>
-    <section class="about-section">
-      <div class="about-container">
-        <h1>About Shithub Softworks</h1>
-        <p>
-          Shithub Softworks is a cutting-edge technology company focused on delivering next-gen innovations that redefine the digital experience. We combine immersive design, unmatched performance, and revolutionary technology to bring you solutions that are as efficient as they are engaging.
-        </p>
-        <p>
-          Our mission is to push the boundaries of what technology can achieve by:
-        </p>
-        <ul>
-          <li><strong>Innovation:</strong> Continuously pioneering new ideas and technologies.</li>
-          <li><strong>Design:</strong> Creating aesthetically pleasing and user-friendly interfaces.</li>
-          <li><strong>Performance:</strong> Optimizing for speed, efficiency, and reliability.</li>
-          <li><strong>User Experience:</strong> Ensuring intuitive interactions for every user.</li>
-        </ul>
-        <p>
-          At Shithub Softworks, we believe in transforming industries by merging technology with creativity. We’re dedicated to delivering products that not only perform at the highest level but also inspire and empower our users.
-        </p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Next-Gen Innovation</h1>
+        <p>Experience the future with cutting-edge technology from Shithub Softworks.</p>
+        <a href="shithub-vr.html" class="btn">Discover Shithub VR</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <div class="feature-card">
+          <h2>Immersive Design</h2>
+          <p>Crafted for excellence with sleek visuals and seamless interaction.</p>
+        </div>
+        <div class="feature-card">
+          <h2>Unmatched Performance</h2>
+          <p>Optimized for speed, efficiency, and high-end performance.</p>
+        </div>
+        <div class="feature-card">
+          <h2>Revolutionary Technology</h2>
+          <p>Pioneering innovations that redefine industry standards.</p>
+        </div>
       </div>
     </section>
   </main>
-  
+
   <!-- Footer -->
   <footer>
     <div class="container">
