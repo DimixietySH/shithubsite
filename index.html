@@ -22,9 +22,9 @@
     referrerpolicy="no-referrer"
   />
 
-  <!-- Inline CSS for Dark Theme and Animations -->
+  <!-- Inline CSS for Dark Theme and Fancy Animations -->
   <style>
-    /* Reset and base styles */
+    /* Reset and Base Styles */
     * {
       margin: 0;
       padding: 0;
@@ -35,6 +35,7 @@
       line-height: 1.6;
       color: #eee;
       background-color: #121212;
+      overflow-x: hidden;
     }
     .container {
       width: 90%;
@@ -50,6 +51,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
     }
     .navbar .logo {
       font-size: 1.5rem;
@@ -70,18 +75,24 @@
       color: #f39c12;
     }
 
-    /* Hero Section */
+    /* Hero Section with Animated Background Gradient */
     .hero {
-      background: url('your-hero-image-dark.jpg') no-repeat center center/cover;
-      color: #eee;
-      height: 80vh;
+      position: relative;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      position: relative;
+      background: linear-gradient(135deg, #000, #1a1a1a);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      overflow: hidden;
     }
-    /* Dark overlay for the hero image */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
     .hero::after {
       content: "";
       position: absolute;
@@ -90,18 +101,21 @@
       width: 100%;
       height: 100%;
       background: rgba(18, 18, 18, 0.8);
+      z-index: 1;
     }
     .hero .container {
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
+      opacity: 0;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 2rem;
+      opacity: 0;
     }
     .btn {
       background: #f39c12;
@@ -110,6 +124,7 @@
       text-decoration: none;
       border-radius: 5px;
       transition: background 0.3s ease, transform 0.3s ease;
+      opacity: 0;
     }
     .btn:hover {
       background: #d35400;
@@ -118,11 +133,11 @@
 
     /* Sections */
     .section {
-      padding: 4rem 0;
-      opacity: 0; /* initial state for animation */
+      padding: 6rem 0;
+      opacity: 0;
     }
     .section h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       text-align: center;
       margin-bottom: 2rem;
       color: #f39c12;
@@ -130,6 +145,9 @@
     .section p {
       text-align: center;
       margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* Products Section */
@@ -149,8 +167,8 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .product-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
     }
 
     /* Contact Form */
@@ -178,7 +196,7 @@
     .footer {
       background: #1e1e1e;
       text-align: center;
-      padding: 1rem 0;
+      padding: 2rem 0;
       color: #bbb;
     }
   </style>
@@ -198,11 +216,13 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero" data-aos="fade-in">
+  <header class="hero">
     <div class="container">
-      <h2>Innovating the Future with AI & Beyond</h2>
-      <p>Discover our award-winning products and cutting-edge solutions.</p>
-      <a href="#products" class="btn">Explore Our Work</a>
+      <h2 data-aos="fade-up">Innovating the Future with AI & Beyond</h2>
+      <p data-aos="fade-up" data-aos-delay="300">
+        Discover our award-winning products and cutting-edge solutions.
+      </p>
+      <a href="#products" class="btn" data-aos="fade-up" data-aos-delay="600">Explore Our Work</a>
     </div>
   </header>
 
@@ -222,13 +242,13 @@
     <div class="container">
       <h2>Our Products</h2>
       <div class="product-list">
-        <div class="product-item">
+        <div class="product-item" data-aos="flip-left">
           <h3>AI Solutions</h3>
           <p>
             State-of-the-art AI implementations transforming industries.
           </p>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="flip-right">
           <h3>Roblox Executor</h3>
           <p>
             Advanced tools for game development and execution within Roblox.
@@ -269,6 +289,10 @@
     </div>
   </footer>
 
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" 
+          integrity="sha512-o5O26/f08bwv9tS6eX3g6I4qEXeBAXjlOyZY+sk90x6He5uoNtfBqZwEVk2f2f5qStEGc+bDx3tOm1D+0xN8+w==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- AOS Animation Library JS -->
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
@@ -276,15 +300,40 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
+  
+  <!-- Initialize AOS -->
   <script>
-    // Initialize AOS (Animate On Scroll)
     AOS.init({
       duration: 1000,
       once: true,
     });
   </script>
+
+  <!-- GSAP Animations for a Fancy Entrance -->
   <script>
-    // Simple contact form submission handling
+    // Animate the hero section elements on page load
+    window.addEventListener('load', () => {
+      gsap.timeline()
+        .to('.hero h2', { opacity: 1, y: 0, duration: 1, ease: "power3.out" })
+        .to('.hero p', { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.5")
+        .to('.btn', { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.5");
+    });
+    
+    // Optional: Add parallax effect to hero background on scroll
+    gsap.to(".hero", {
+      backgroundPosition: "50% 80%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  </script>
+
+  <!-- Simple Contact Form Submission Handling -->
+  <script>
     document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
       alert("Thank you for contacting us!");
