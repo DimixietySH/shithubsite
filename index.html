@@ -1,206 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shithub Softworks</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- AOS Animation Library CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    integrity="sha512-GY1Y0A0V79kP9IrN6vUzQnWnPpWTfL3EEmF3q7RP4jBqNG5OF6wFX1QYJQ0U98QjL3NqJkKp8NvuK6FjT9Y+ug=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  <!-- Inline CSS for Dark Theme and Fancy Animations -->
-  <style>
-    /* Reset and Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      color: #eee;
-      background-color: #121212;
-      overflow-x: hidden;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* Navigation */
-    .navbar {
-      background: #121212;
-      padding: 1rem 0;
-      border-bottom: 1px solid #333;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-    .navbar .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #f39c12;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #eee;
-      transition: color 0.3s ease;
-    }
-    .nav-links a:hover {
-      color: #f39c12;
-    }
-
-    /* Hero Section with an Updated Gradient */
-    .hero {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      /* Updated gradient with dark orange tint */
-      background: linear-gradient(135deg, #1a1a1a, #331400, #1a1a1a);
-      background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
-      overflow: hidden;
-    }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(18, 18, 18, 0.8);
-      z-index: 1;
-    }
-    .hero .container {
-      position: relative;
-      z-index: 2;
-    }
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      opacity: 0;
-    }
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      opacity: 0;
-    }
-    .btn {
-      background: #f39c12;
-      color: #121212;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease, transform 0.3s ease;
-      opacity: 0;
-    }
-    .btn:hover {
-      background: #d35400;
-      transform: scale(1.05);
-    }
-
-    /* Sections */
-    .section {
-      padding: 6rem 0;
-      opacity: 0;
-    }
-    .section h2 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #f39c12;
-    }
-    .section p {
-      text-align: center;
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Products Section */
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-    .product-item {
-      background: #1e1e1e;
-      padding: 2rem;
-      border-radius: 8px;
-      flex: 1 1 300px;
-      max-width: 400px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .product-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Contact Form */
-    #contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 500px;
-      margin: auto;
-    }
-    #contact-form input,
-    #contact-form textarea {
-      padding: 0.75rem;
-      border: 1px solid #333;
-      border-radius: 5px;
-      background: #1e1e1e;
-      color: #eee;
-    }
-    #contact-form input::placeholder,
-    #contact-form textarea::placeholder {
-      color: #bbb;
-    }
-
-    /* Footer */
-    .footer {
-      background: #1e1e1e;
-      text-align: center;
-      padding: 2rem 0;
-      color: #bbb;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <!-- You can include a font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation -->
@@ -219,134 +26,66 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="container">
-      <h2 data-aos="fade-up">Innovating the Future with AI & Beyond</h2>
-      <p data-aos="fade-up" data-aos-delay="300">
-        Discover our award-winning products and cutting-edge solutions.
-      </p>
-      <a href="#products" class="btn" data-aos="fade-up" data-aos-delay="600">Explore Our Work</a>
+      <h2>Innovating the Future with AI & Beyond</h2>
+      <p>Discover our award-winning products and cutting-edge solutions.</p>
+      <a href="#products" class="btn">Explore Our Work</a>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="section" data-aos="fade-up">
+  <section id="about" class="section about">
     <div class="container">
       <h2>About Us</h2>
-      <p>
-        Shithub Softworks is a leader in innovative technology solutions,
-        from advanced AI to dynamic game development tools.
-      </p>
+      <p>Shithub Softworks is a leader in innovative technology solutions, from advanced AI to dynamic game development tools.</p>
     </div>
   </section>
 
   <!-- Products Section -->
-  <section id="products" class="section" data-aos="fade-up">
+  <section id="products" class="section products">
     <div class="container">
       <h2>Our Products</h2>
       <div class="product-list">
-        <div class="product-item" data-aos="flip-left">
+        <!-- Product Item Example -->
+        <div class="product-item">
           <h3>AI Solutions</h3>
-          <p>
-            State-of-the-art AI implementations transforming industries.
-          </p>
+          <p>State-of-the-art AI implementations transforming industries.</p>
         </div>
-        <div class="product-item" data-aos="flip-right">
+        <div class="product-item">
           <h3>Roblox Executor</h3>
-          <p>
-            Advanced tools for game development and execution within Roblox.
-          </p>
+          <p>Advanced tools for game development and hacking within Roblox.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Series Section -->
-  <section id="series" class="section" data-aos="fade-up">
+  <section id="series" class="section series">
     <div class="container">
       <h2>Award Winning Series</h2>
-      <p>
-        Explore our critically acclaimed series that has captivated audiences
-        worldwide.
-      </p>
+      <p>Explore our critically acclaimed series that has captivated audiences worldwide.</p>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section" data-aos="fade-up">
+  <section id="contact" class="section contact">
     <div class="container">
       <h2>Contact Us</h2>
       <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
         <textarea placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Shithub Softworks. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- GSAP and ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" 
-          integrity="sha512-o5O26/f08bwv9tS6eX3g6I4qEXeBAXjlOyZY+sk90x6He5uoNtfBqZwEVk2f2f5qStEGc+bDx3tOm1D+0xN8+w==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js" 
-          integrity="sha512-EYBg3iBst/t5nULaBjXAD2C++qk1rXlNfPBTY7vCZK7pDvlP3FmwE80i0o9cEdE36lFAW2ZlZ3nGPpvkXSt1mA==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
-  <!-- AOS Animation Library JS -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-    integrity="sha512-8VdIgLrG2FslAxnExENd9Kw9RgtZr9uy6D1GRGEnkzv2F9Kr7Vg6we0WJXTkYz2PpSnuEF3dRka+UyP9b1yj0w=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  
-  <!-- Initialize AOS -->
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
-
-  <!-- GSAP Animations -->
-  <script>
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Animate the hero section elements on page load
-    window.addEventListener('load', () => {
-      gsap.timeline()
-        .to('.hero h2', { opacity: 1, y: 0, duration: 1, ease: "power3.out" })
-        .to('.hero p', { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.5")
-        .to('.btn', { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.5");
-    });
-    
-    // Parallax effect on hero background
-    gsap.to(".hero", {
-      backgroundPosition: "50% 80%",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      }
-    });
-  </script>
-
-  <!-- Simple Contact Form Submission Handling -->
-  <script>
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thank you for contacting us!");
-      this.reset();
-    });
-  </script>
+  <!-- Optional JavaScript for interactive elements -->
+  <script src="script.js"></script>
 </body>
 </html>
