@@ -40,7 +40,7 @@
     .about-container li {
       margin-bottom: 10px;
     }
-
+    
     /* Global container */
     .container {
       width: 90%;
@@ -56,6 +56,9 @@
       color: #ffffff;
       border-top: 2px solid #000; /* Consistent black border */
       min-height: 60px;
+      display: flex;              /* Use flexbox for vertical centering */
+      align-items: center;        /* Center content vertically */
+      justify-content: center;    /* Center content horizontally */
     }
   </style>
 </head>
@@ -68,7 +71,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">About</a></li>
-          <li><a href="projects.html">Projects</a></li> <!-- Projects button added back -->
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
