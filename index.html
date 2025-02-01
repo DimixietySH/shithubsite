@@ -289,10 +289,14 @@
     </div>
   </footer>
 
-  <!-- GSAP Animation Library -->
+  <!-- GSAP and ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" 
           integrity="sha512-o5O26/f08bwv9tS6eX3g6I4qEXeBAXjlOyZY+sk90x6He5uoNtfBqZwEVk2f2f5qStEGc+bDx3tOm1D+0xN8+w==" 
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js" 
+          integrity="sha512-EYBg3iBst/t5nULaBjXAD2C++qk1rXlNfPBTY7vCZK7pDvlP3FmwE80i0o9cEdE36lFAW2ZlZ3nGPpvkXSt1mA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <!-- AOS Animation Library JS -->
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
@@ -309,8 +313,11 @@
     });
   </script>
 
-  <!-- GSAP Animations for a Fancy Entrance -->
+  <!-- GSAP Animations -->
   <script>
+    // Register the ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
     // Animate the hero section elements on page load
     window.addEventListener('load', () => {
       gsap.timeline()
@@ -319,7 +326,7 @@
         .to('.btn', { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.5");
     });
     
-    // Optional: Add parallax effect to hero background on scroll
+    // Parallax effect on hero background
     gsap.to(".hero", {
       backgroundPosition: "50% 80%",
       ease: "none",
